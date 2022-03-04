@@ -1,0 +1,64 @@
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarItem{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebarImg{
+    margin-top:15px;
+    height: 50%;
+    width: 50%;
+}
+
+.sidebarItem > p{
+    padding: 30px;
+}
+
+.sidebarList{
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.sidebarListItem{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.sidebarSocial{
+    margin-top:15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarIcon{
+    font-size:15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebarTitle{
+    margin: 10px;
+    padding: 5px;
+    width:80%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-family: 'League Gothic', sans-serif;
+    font-size:15px;
+    font-weight:600;
+    line-height:20px;
+    text-align: center;
+}
