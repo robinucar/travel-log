@@ -16,9 +16,6 @@ As a user
 So that I can share my holiday experiences
 I want to be able to create a post.
 
-As a user 
-So that I can share my holiday experiences
-I want to rate my holiday.
 
 As a user
 So that I can show the pictures of where I visited
@@ -53,6 +50,9 @@ So that I can leave the travel log app after my post
 I want to be able to log out.
 
 # Extra features
+As a user 
+So that I can share my holiday experiences
+I want to rate my holiday.
 
 As a user
 So that I can see special blog-writers posts
