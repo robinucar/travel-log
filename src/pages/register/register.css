@@ -1,0 +1,56 @@
+.register{
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 
+  linear-gradient(
+      rgba(255,255,255,0.4), 
+      rgba(255,255,255,0.4)
+    ), 
+    url("https://img.pixers.pics/pho_wat(s3:700/FO/53/39/54/83/700_FO53395483_e7b4185d329eb6b4c6be0c4856a2cf2a.jpg,700,472,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,422,jpg)/throw-pillows-shanghai-bund-at-city-landscape-panoramic-skyline.jpg.jpg");
+    background-size: cover;
+}
+
+.registerTitle{
+  font-size: 50px;
+}
+
+.registerForm{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label{
+  margin: 10px 0;
+}
+
+.registerInput{
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+
+.registerButton{
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(147, 248, 147);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.registerLoginButton{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgb(51, 173, 214);
+  cursor : pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
