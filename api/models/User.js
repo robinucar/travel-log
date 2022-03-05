@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // user schema
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
       // first name and last name
     username: {
@@ -35,4 +35,4 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("User", UserSchema);
