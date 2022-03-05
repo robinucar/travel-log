@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const PORT = 5001;
 
+
 dotenv.config();
 app.use(express.json());
 
