@@ -27,11 +27,11 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   //distract
-  // const {username} = req.body
+   const {username} = req.body
 
   try {
       //use email instead of username later
-    const user = await User.findOne({ username: req.body.username });
+    const user = await User.findOne({ username });
 
     !user && res.status(400).json("Wrong credentials!");
 
