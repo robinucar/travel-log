@@ -20,6 +20,7 @@ mongoose
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
+  // Add image
   const storage = multer.diskStorage({
     destination:(req, file, callback) => {
       callback(null, "images")
