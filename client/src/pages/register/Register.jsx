@@ -7,22 +7,22 @@ export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [password2, setPassword2] = useState("")
+  const [password2, setPassword2] = useState("");
   const [error, setError] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(false)
+    setError(false);
     try {
       const res = await axios.post("/auth/register", {
         username,
         email,
         password,
-        password2
+        password2,
       });
-      if(password.length > 5 && password === password2) {
-      res.data && window.location.replace("/login");
+      if (password.length > 5 && password === password2) {
+        res.data && window.location.replace("/login");
       } else {
-        setError(true)
+        setError(true);
       }
     } catch (err) {
       setError(true);
@@ -69,7 +69,11 @@ export default function Register() {
           Login
         </Link>
       </button>
-      {error && <span style={{color:"red", marginTop: "10px"}}>Something went wrong!</span>}
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Something went wrong!
+        </span>
+      )}
     </div>
   );
 }
