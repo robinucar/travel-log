@@ -19,7 +19,7 @@ export default function Register() {
         password,
         password2
       });
-      if(password === password2) {
+      if(password.length > 5 || password === password2) {
       res.data && window.location.replace("/login");
       } else {
         setError(true)
