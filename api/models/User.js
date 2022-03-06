@@ -25,8 +25,6 @@ const UserSchema = new mongoose.Schema(
       //min length
     },
 
-    // password confirmation
-
     profilePic: {
       type: String,
       default: "",

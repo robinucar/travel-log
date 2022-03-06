@@ -17,8 +17,13 @@ export default function Register() {
         username,
         email,
         password,
+        password2
       });
+      if(password === password2) {
       res.data && window.location.replace("/login");
+      } else {
+        setError(true)
+      }
     } catch (err) {
       setError(true);
     }
