@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
-const postRoute = require('./routes/posts')
+const postRoute = require("./routes/posts");
+const categoryRoute = require("./routes/categories");
 const PORT = 5000;
 
 dotenv.config();
@@ -21,7 +22,7 @@ mongoose
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
-
+app.use("/api/categories", categoryRoute);
 app.listen(PORT, () => {
   console.log(`Backend is running at ${PORT}`);
 });
