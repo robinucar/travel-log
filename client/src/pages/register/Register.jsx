@@ -7,6 +7,7 @@ export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("")
   const [error, setError] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,6 +47,13 @@ export default function Register() {
           className="registerInput"
           placeholder="Enter your password..."
           onChange={(e) => setPassword(e.target.value)}
+        />
+        <label>Password Confirmation</label>
+        <input
+          type="password"
+          className="registerInput"
+          placeholder="Confirm your password..."
+          onChange={(e) => setPassword2(e.target.value)}
         />
         <button className="registerButton" type="submit">
           Register
