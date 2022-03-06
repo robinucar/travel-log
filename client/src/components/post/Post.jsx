@@ -1,35 +1,32 @@
-import './post.css'
+import "./post.css";
+import { Link } from "react-router-dom";
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
-      <img className="postImg"
-      src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
+      {post.photo && (
+        <img className="postImg" src={post.photo} alt="Post Image" />
+      )}
+      <img
+        className="postImg"
+        src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+      />
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">London</span>
-        </div>  
-          <span className="postTitle">
-            Lorem ipsum dolor sit amet
-          </span>
-          <hr/>
-          <span className="postDate">1 hour ago</span>
+          {post.categories.map((c) => {
+            <span className="postCat" key = {c.id}>{c.name}</span>;
+          })}
+        </div>
+        <Link to={`/post/${post._id}`}>
+          <span className="postTitle"> {post.title} </span>
+        </Link>
+        <hr />
+        <span className="postDate">
+          {" "}
+          {new Date(post.createdAt).toDateString}
+        </span>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur laboriosam quam ducimus 
-        blanditiis mollitia sint ratione suscipit odio saepe laudantium, eius corporis facere quos, 
-        eaque tempora iusto cupiditate quae perspiciatis?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur laboriosam quam ducimus 
-        blanditiis mollitia sint ratione suscipit odio saepe laudantium, eius corporis facere quos, 
-        eaque tempora iusto cupiditate quae perspiciatis?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur laboriosam quam ducimus 
-        blanditiis mollitia sint ratione suscipit odio saepe laudantium, eius corporis facere quos, 
-        eaque tempora iusto cupiditate quae perspiciatis?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur laboriosam quam ducimus 
-        blanditiis mollitia sint ratione suscipit odio saepe laudantium, eius corporis facere quos, 
-        eaque tempora iusto cupiditate quae perspiciatis?
-        </p>
+      <p className="postDesc"></p>
     </div>
-
-  )
+  );
 }
