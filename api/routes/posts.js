@@ -4,6 +4,10 @@ const Post = require("../models/Post");
 
 //
 // CREATE POST
+//test
+router.post("/posts/upload", async (req, res) => {
+console.log("this is another run...")
+})
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
@@ -12,6 +16,7 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+  console.log("I run")
 });
 
 // UPDATE POST
