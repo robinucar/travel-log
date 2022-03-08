@@ -49,6 +49,7 @@
   line-height: 24px;
   margin-top: 15px;
   overflow: hidden;
+  text-align: justify;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;

@@ -28,7 +28,7 @@ export default function Write() {
     }
     try {
       const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      window.location.replace('/');
     } catch (err) {}
   };
   return (
@@ -63,9 +63,9 @@ export default function Write() {
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>
-        <button className="writeSubmit" type="submit">
+          <button className="writeSubmit" type="submit">
           Publish
-        </button>
+          </button>
       </form>
     </div>
   );

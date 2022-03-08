@@ -58,7 +58,7 @@ export default function SinglePost() {
             className="singlePostTitleInput"
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
-          />
+          /> 
         ) : (
           <h1 className="singlePostTitle">
             {title}
@@ -80,7 +80,7 @@ export default function SinglePost() {
           <span className="singlePostAuthor">
             Author:
             <Link to={`/?user=${post.username}`} className="link">
-              <b> {post.username}</b>
+              <b style={{textTransform: 'capitalize'}}> {post.username}</b>
             </Link>
           </span>
           <span className="singlePostDate">
@@ -89,6 +89,8 @@ export default function SinglePost() {
         </div>
         {updateMode ? (
           <textarea
+            rows={30}
+            cols={130}
             className="singlePostDescInput"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
