@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
+import Search from '../../components/Search/Search'
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -26,13 +27,8 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/about">
               ABOUT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              CONTACT
             </Link>
           </li>
           <li className="topListItem">
@@ -65,8 +61,6 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
-
       </div>
     </div>
   );
