@@ -7,6 +7,7 @@ export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
+  const [cat, setCat] = useState('')
   const { user } = useContext(Context);
 
   const handleSubmit = async (e) => {
@@ -14,6 +15,7 @@ export default function Write() {
     const newPost = {
       username: user.username,
       title,
+      cat,
       desc,
     };
     if (file) {
@@ -55,6 +57,13 @@ export default function Write() {
             className="writeInput"
             autoFocus={true}
             onChange={e=>setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="City"
+            className="writeInput"
+            autoFocus={true}
+            onChange={e=>setCat(e.target.value)}
           />
         </div>
         <div className="writeFormGroup">
