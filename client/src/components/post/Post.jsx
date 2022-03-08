@@ -8,7 +8,6 @@ export default function Post({ post }) {
       {post.photo && (
         <img className="postImg" src={PF + post.photo} alt="Post Image" />
       )}
-     
       <div className="postInfo">
         <div className="postCats">
           {post.categories.map((c) => {
@@ -26,7 +25,7 @@ export default function Post({ post }) {
           {new Date(post.createdAt).toDateString}
         </span>
       </div>
-      <p className="postDesc"></p>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 }
