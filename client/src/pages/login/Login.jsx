@@ -31,7 +31,7 @@ export default function Login() {
     <div className="login">
         <span className="loginTitle">Login</span>
       <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label aria-labelledby="Username">Username</label>
         <input type="text" className="loginInput" placeholder="Enter your username..." ref={userRef} />
         <label>Password</label>
         <input type="password" className="loginInput" placeholder="Enter your password..." ref={passwordRef} />
