@@ -16,7 +16,7 @@ export default function Post({ post }) {
             </span>;
           })}
         </div>
-        <Link to={`/post/${post._id}`}>
+        <Link to={`/post/${post._id}`} style={{textDecoration: 'none', color: '#444'}}>
           <span className="postTitle"> {post.title} </span>
         </Link>
         <hr />

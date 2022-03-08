@@ -27,8 +27,8 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/about">
-              ABOUT
+            <Link className="link" to="/destinations">
+              DESTINATIONS
             </Link>
           </li>
           <li className="topListItem">

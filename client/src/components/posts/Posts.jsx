@@ -6,7 +6,7 @@ export default function Posts({posts}) {
     <div className="posts">
       {posts && posts.sort(function(a,b){
         return new Date(b.createdAt) - new Date(a.createdAt);
-    }).map(p =>(
+      }).map(p =>(
         <Post post = {p} key ={p.id}/>
       ))}
     </div>
