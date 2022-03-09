@@ -13,6 +13,7 @@ export default function SinglePost() {
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [categories, setCategories] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,8 @@ export default function SinglePost() {
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
+      setCategories(res.data.categories)
+      
     };
     getPost();
   }, [path]);
@@ -40,6 +43,7 @@ export default function SinglePost() {
         username: user.username,
         title,
         desc,
+        categories
       });
       setUpdateMode(false)
     } catch (err) {}
@@ -59,6 +63,7 @@ export default function SinglePost() {
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
           /> 
+          
         ) : (
           <h1 className="singlePostTitle">
             {title}
