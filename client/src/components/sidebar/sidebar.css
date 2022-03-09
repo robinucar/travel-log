@@ -62,3 +62,29 @@
     line-height:20px;
     text-align: center;
 }
+.my-custom-view-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: justify;
+}
+.my-custom-view-wrapper div:last-child {
+    /* Here we are styling the button container. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.singlePostButton{
+    border-color: rgba(255,255,255,1);
+    cursor: pointer;
+    background-color: rgb(51, 173, 214);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}

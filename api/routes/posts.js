@@ -6,8 +6,9 @@ const Post = require("../models/Post");
 // CREATE POST
 //test
 router.post("/posts/upload", async (req, res) => {
-console.log("this is another run...")
+  console.log("this is another run...")
 })
+
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
