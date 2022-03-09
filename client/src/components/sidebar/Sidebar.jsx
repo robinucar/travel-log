@@ -1,21 +1,25 @@
 import "./sidebar.css";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 export default function Sidebar() {
-  const [ cats, setCats ] = useState([]);
-
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  console.log(location.pathname)
+  console.log(path)
+  const [categories, setCategories] = useState([]);
   useEffect(() => {
-      const getCats = async () =>
-      { 
-          const res = await axios.get("/categories")
-         
-          await setCats(res.data);
-
-      };
-      getCats();
-  }, []);
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setCategories(res.data.categories)
+    };
+    getPost();
+    
+  }, [path]);
+  
 
   return (
     <div className="sidebar">
@@ -34,13 +38,16 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">MOST VISITED CITIES</span>
+        <span className="sidebarTitle">VISITED CITIES</span>
         <ul className="sidebarList">
-          {cats?.map((c) => (
-            <Link to={`/?cat=${c.name}`} className="link">
-              <li className="sidebarListItem">{c.name}</li>
-            </Link>
-          ))}
+          
+          {/* {categories.map(elm => {
+            return <li>{elm}</li>
+          }) */}
+           {categories.toString().split(',').map(elm => {
+             console.log(elm.trim())
+             return <li>{elm.trim().charAt(0).toUpperCase() + elm.trim().slice(1)}</li>
+           })}
         </ul>
       </div>
       <div className="sidebarItem">

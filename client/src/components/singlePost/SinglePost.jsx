@@ -93,17 +93,6 @@ export default function SinglePost() {
           </span>
         </div>
         {updateMode ? (
-          <input
-          type="text"
-          value={categories}
-          className="singlePostTitleInput"
-          autoFocus
-          onChange={(e) => setCategories(e.target.value)}
-        /> 
-        ) : (
-          <h4>City:{categories}</h4>
-        )}
-        {updateMode ? (
           <textarea
             rows={30}
             cols={130}

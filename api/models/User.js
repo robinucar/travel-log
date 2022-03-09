@@ -34,6 +34,14 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    aboutMe: {
+      type: String,
+      default: ""
+    },
+    contact: {
+      type: Array,
+      required: false
+    },
   },
   { timestamps: true }
 );
