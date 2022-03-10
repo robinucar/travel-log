@@ -3,6 +3,25 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 const bcrypt = require("bcryptjs");
 
+//Create
+router.post("/:id/aboutme", async (req, res) => {
+  console.log(req.body)
+  const about = req.body.aboutMe
+  const { id } = req.params
+  console.log(about)
+
+  const user = await User.findByIdAndUpdate(id, {aboutMe: req.body.aboutMe});
+  console.log(user) 
+
+  user.save()
+  .then(each => {
+    res.send(user);
+  })
+  .catch(err => {
+    res.status(400).send("unable to save to database");
+  }); 
+})
+
 // UPDATE
 router.put("/:id", async (req, res) => {
   const { userId, password } = req.body;
@@ -14,15 +33,7 @@ router.put("/:id", async (req, res) => {
     }
 
     try {
-      const updatedUser = await User.findByIdAndUpdate(
-        id,
-        {
-          $set: req.body,
-        },
-        {
-          new: true,
-        }
-      );
+      const updatedUser = await User.findByIdAndUpdate(id,{ $set: req.body,},{new: true,});
       res.status(200).json(updatedUser);
     } catch (err) {
       res.status(500).json(err);

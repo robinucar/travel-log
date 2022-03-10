@@ -26,7 +26,7 @@ export default function Home() {
 
   const updateInput = async (input) => {
      const filtered = postsList.filter(posts => {
-      return posts.desc.toLowerCase().includes(input.toLowerCase())
+      return posts.desc.toLowerCase().includes(input.toLowerCase()) || posts.title.toLowerCase().includes(input.toLowerCase()) 
      })
      setInput(input);
      setPosts(filtered);

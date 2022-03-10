@@ -14,6 +14,8 @@ console.log(categories)
     e.preventDefault();
     const newPost = {
       username: user.username,
+      aboutMe: user.aboutMe,
+      profilePic: user.profilePic,
       title,
       categories,
       desc,

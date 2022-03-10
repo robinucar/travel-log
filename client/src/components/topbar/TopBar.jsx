@@ -27,8 +27,8 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/about">
-              ABOUT
+            <Link className="link" to="/destinations">
+              DESTINATIONS
             </Link>
           </li>
           <li className="topListItem">
@@ -44,9 +44,12 @@ export default function TopBar() {
       <div className="topRight">
 
         {user ? (
+          <div>
           <Link to="/settings">
             <img className="topImg" src={PF+user.profilePic} alt="" />
           </Link>
+          <span style={{textTransform: 'capitalize', fontFamily: 'Hubballi'}}>{user.username}</span>
+          </div>
         ) : (
           <ul className="topList">
             <li className="topListItem">
