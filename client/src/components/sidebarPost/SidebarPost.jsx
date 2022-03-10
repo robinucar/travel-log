@@ -2,7 +2,6 @@ import "./sidebarPost.css";
 import { useEffect, useState, useContext } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import 'react-edit-text/dist/index.css';
 import axios from "axios";
 
 export default function SidebarPost() {

@@ -3,7 +3,6 @@ import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import { useLocation } from "react-router";
-import 'react-edit-text/dist/index.css';
 import axios from "axios";
 
 export default function Sidebar() {

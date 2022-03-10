@@ -7,31 +7,33 @@
     justify-content: center;
     align-items: center;
     font-family: 'League Gothic', sans-serif;
-   
+    margin-bottom:20px;
+    margin-top:20px;
     
 }
 
 .top-right{
     position: relative;
-    flex: 12;
+    width: 100%;
+    margin-right:38px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
   
 .searchIcon{
-    top: 4px; 
-    left: 200px;
+  position: absolute;
+    top: 20px; 
+    left: 850px;
     margin-right: 6px;
     margin-top: -6px;
-    position: relative;
     cursor: pointer;
 }
 
 .search-input{
     border: 1px solid rgb(33, 33, 33);
     border-radius: 5px;
-    height: 20px;
+    height: 40px;
     width:15%;
     padding: 2px 23px 2px 30px;
     outline: 0;

@@ -9,53 +9,63 @@
       rgba(255,255,255,0.4), 
       rgba(255,255,255,0.4)
     ), 
-    url("https://img.pixers.pics/pho_wat(s3:700/FO/53/39/54/83/700_FO53395483_e7b4185d329eb6b4c6be0c4856a2cf2a.jpg,700,472,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,422,jpg)/throw-pillows-shanghai-bund-at-city-landscape-panoramic-skyline.jpg.jpg");
+    url("https://t4.ftcdn.net/jpg/04/09/65/71/240_F_409657181_sRsNzbmI5xdHyVMWvx1zFis0Z9ECXpYG.jpg");
     background-size: cover;
 }
 
 .registerTitle{
   font-size: 50px;
+  font-family: 'League Gothic', sans-serif;
 }
 
 .registerForm{
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .registerForm > label{
   margin: 10px 0;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .registerInput{
   padding: 10px;
   background-color: white;
-  width: 100%;
+  width: 150%;
   border: none;
   cursor: auto;
+  border-radius: 5px;
 }
 
 .registerButton{
   margin-top: 20px;
-  margin-left: 9px;
-  width: 100%;
+  margin-right: 2px;
+  width: 150%;
   cursor: pointer;
-  background-color: rgb(147, 248, 147);
+  background-color: rgb(238, 39, 33);
   border: none;
   color: white;
   border-radius: 10px;
   padding: 10px;
-  width: 110%;
 }
 
 .registerLoginButton{
   position: absolute;
   top: 60px;
-  right: 20px;
+  right: 10px;
   background-color: rgb(51, 173, 214);
   cursor : pointer;
   border: none;
   padding: 10px;
   border-radius: 10px;
   color: white;
+}
+
+.linkTag{
+  color: rgb(20, 50, 95);
+  font-weight: bold;
+  font-family:'Fredoka', sans-serif; ;
 }

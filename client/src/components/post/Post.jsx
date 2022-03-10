@@ -27,6 +27,7 @@ export default function Post({ post }) {
         </span>
       </div>
       <p className="postDesc">{post.desc}</p>
+      <button className="btn-post"><Link className="postButton" to={`/post/${post._id}`}>Read more</Link></button>
     </div>
   );
 }
