@@ -1,6 +1,6 @@
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
@@ -42,12 +42,11 @@ export default function Settings() {
     }
   };
 
-    const handleDelete = async () => {
-      const res = await axios.delete("/users/" + user._id)
-    }
+  const handleDelete = async () => {
+    const res = await axios.delete("/users/" + user._id);
+    dispatch({ type: "LOGOUT" })
+  }
 
- 
-  
   return (
     <div className="settings">
       <div className="settingsWrapper">
