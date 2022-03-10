@@ -5,13 +5,14 @@ import { Context } from "../../context/Context";
 import 'react-edit-text/dist/index.css';
 import axios from "axios";
 
-export default function Sidebar() {
+export default function SidebarPost() {
   const [file, setFile] = useState(null);
   const [ cats, setCats ] = useState([]);
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [about, setAbout] = useState('');
   const [post, setPost] = useState({});
+  const [categories, setCategories] = useState([]);
   const { user } = useContext(Context);
   const PF = "http://localhost:5000/images/"
   
@@ -26,8 +27,8 @@ export default function Sidebar() {
   // FETCH CATEGORIES DATA
   useEffect(() => {
       const getCats = async () => { 
-          const res = await axios.get("/categories") 
-          await setCats(res.data);
+          const res = await axios.get("/posts/" + path) 
+          await setCategories(res.data.categories);
           console.log(res, 'getcats')
       };
       getCats();
@@ -57,13 +58,16 @@ export default function Sidebar() {
           <p>{console.log(post.username, post.aboutMe)}</p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">MOST VISITED CITIES</span>
+        <span className="sidebarTitle">VISITED CITIES</span>
         <ul className="sidebarList">
-          {cats?.map((c) => (
-            <Link to={`/?cat=${c.name}`} className="link">
-              <li className="sidebarListItem">{c.name}</li>
-            </Link>
-          ))}
+          
+          {/* {categories.map(elm => {
+            return <li>{elm}</li>
+          }) */}
+           {categories.toString().split(',').map(elm => {
+             console.log(elm.trim())
+             return <li>{elm.trim().charAt(0).toUpperCase() + elm.trim().slice(1)}</li>
+           })}
         </ul>
       </div>
       <div className="sidebarItem">
