@@ -9,6 +9,7 @@ export default function Search({input:keyword, onChange:setKeyword}) {
       <div className="top-right">
           <i class="searchIcon fa-solid fa-magnifying-glass"></i>
           <input
+            className="search-input"
             style={styling}
             name="search" 
             key="random1"

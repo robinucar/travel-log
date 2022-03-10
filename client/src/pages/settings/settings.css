@@ -1,22 +1,38 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 .settings{
   display: flex;
 }
 
+.empty-div{
+  flex: 3;
+}
+
 .settingsWrapper {
-  flex: 9;
+  flex: 6;
   padding: 20px;
 } 
  
 .settingsTitle{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .settingsUpdateTitle{
-font-size: 30px;
-margin-bottom: 20px;
-color: rgb(24, 167, 24);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  color: rgb(10, 15, 10);
 }
 
 .settingsDeleteTitle{
@@ -28,6 +44,9 @@ color: rgb(24, 167, 24);
 .settingsForm{
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  font-family: 'Fredoka', sans-serif;;
 }
 
 .settingsPP{
@@ -60,15 +79,38 @@ color: rgb(24, 167, 24);
   margin-top: 20px;
 }
 
-.settingsForm .input {
-  color: gray;
-  margin: 10px;
-  height: 30px;
-  border: none;border-bottom: 1px solid lightgrey;
+.settingsForm > input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.settingsForm > input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.settingsForm > input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .settingsSubmit {
-  width: 150px;
+  width: 50%;
   align-self: center;
   border: none;
   border-radius: 10px;
@@ -77,7 +119,26 @@ color: rgb(24, 167, 24);
   padding: 10px;
   margin-top: 20px;
   cursor: pointer;
+}
 
+.deleteButton {
+  width: 50%;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
 
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+}
 
+.sidebarAbout{
+  flex: 3;
+  margin-top:50px;
 }

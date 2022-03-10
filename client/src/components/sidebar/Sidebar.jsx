@@ -20,7 +20,7 @@ export default function Sidebar() {
     const res = await axios.post(`/users/${user._id}/aboutme`, {
       aboutMe: aboutMe
     });
-    setUpdateMode(false)
+    setUpdateMode(true)
     window.location.reload(true);
     console.log(res);
     } catch (err) {}
@@ -83,7 +83,7 @@ export default function Sidebar() {
             onChange={(e) => setAboutMe(e.target.value)}
           /> 
         ) : (
-          <p>
+          <p className="aboutme">
             {about.aboutMe}
             {about.username === user?.username && ( <i className="singlePostIcon far fa-edit" onClick={() => setUpdateMode(true)}></i>)}
           </p>
@@ -94,20 +94,6 @@ export default function Sidebar() {
             Save
           </button>
         )}
-
-      </div>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">VISITED CITIES</span>
-        <ul className="sidebarList">
-          
-          {/* {categories.map(elm => {
-            return <li>{elm}</li>
-          }) */}
-           {categories.toString().split(',').map(elm => {
-             console.log(elm.trim())
-             return <li>{elm.trim().charAt(0).toUpperCase() + elm.trim().slice(1)}</li>
-           })}
-        </ul>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW ME</span>

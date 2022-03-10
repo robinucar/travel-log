@@ -49,10 +49,10 @@ export default function Settings() {
 
   return (
     <div className="settings">
+      <div className="empty-div"></div>
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <button onClick={handleDelete}>DELETE ACCOUNT</button>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
@@ -74,13 +74,13 @@ export default function Settings() {
           <label>Username</label>
           <input
             type="text"
-            placeholder={user.username}
+            placeholder="Enter your username..."
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input
             type="email"
-            placeholder={user.email}
+            placeholder='Enter your email..'
             onChange={(e) => setEmail(e.target.value)}
           />
           <label>Password</label>
@@ -91,6 +91,7 @@ export default function Settings() {
           <button className="settingsSubmit" type="submit">
             Update
           </button>
+          <button className="deleteButton" onClick={handleDelete}>Delete Account</button>
           {success && (
             <span
               style={{ color: "green", textAlign: "center", marginTop: "20px" }}
@@ -100,7 +101,9 @@ export default function Settings() {
           )}
         </form>
       </div>
-      <Sidebar />
+      <div className="sidebarAbout">
+       <Sidebar />
+      </div>
     </div>
   );
 }

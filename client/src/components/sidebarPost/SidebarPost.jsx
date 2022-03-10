@@ -15,11 +15,13 @@ export default function SidebarPost() {
   const [categories, setCategories] = useState([]);
   const { user } = useContext(Context);
   const PF = "http://localhost:5000/images/"
+  const Author = `http://localhost:5000/posts/${path}`
   
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(`/posts/${path}`);
       setPost(res.data);
+      console.log(res.data, 'check');
     };
     getPost();
   }, [path]);
@@ -55,15 +57,11 @@ export default function SidebarPost() {
             />
           </div>
           <p>{post.aboutMe}</p>
-          <p>{console.log(post.username, post.aboutMe)}</p>
+          {console.log(post.username, post.aboutMe)}
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">VISITED CITIES</span>
         <ul className="sidebarList">
-          
-          {/* {categories.map(elm => {
-            return <li>{elm}</li>
-          }) */}
            {categories.toString().split(',').map(elm => {
              console.log(elm.trim())
              return <li>{elm.trim().charAt(0).toUpperCase() + elm.trim().slice(1)}</li>
@@ -82,5 +80,3 @@ export default function SidebarPost() {
     </div>
   );
 }
-
-// onSave={handleSave}

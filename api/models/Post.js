@@ -10,10 +10,12 @@ const PostSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+
     desc: {
       type: String,
       required: true,
     },
+
     photo: {
       type: String,
       required: false,
@@ -31,13 +33,14 @@ const PostSchema = new mongoose.Schema(
 
     profilePic: {
       type: String,
-      required: true,
+      required: false,
     },
 
     categories: {
       type: Array,
       required: false,
     },
+    
   },
   { timestamps: true }
 );
