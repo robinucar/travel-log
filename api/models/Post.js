@@ -23,6 +23,17 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    
+    aboutMe: {
+      type: String,
+      required: true,
+    },
+
+    profilePic: {
+      type: String,
+      required: true,
+    },
+
     categories: {
       type: Array,
       required: false,

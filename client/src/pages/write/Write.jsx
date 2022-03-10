@@ -13,6 +13,8 @@ export default function Write() {
     e.preventDefault();
     const newPost = {
       username: user.username,
+      aboutMe: user.aboutMe,
+      profilePic: user.profilePic,
       title,
       desc,
     };
