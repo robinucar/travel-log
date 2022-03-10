@@ -4,9 +4,11 @@
     background-color: white;
     top: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-family: 'League Gothic', sans-serif;
-    z-index: 999;
+   
+    
 }
 
 .top-right{

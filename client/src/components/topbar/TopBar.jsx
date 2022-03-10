@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
 import Search from '../../components/Search/Search'
+import Header from '../header/Header'
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
