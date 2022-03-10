@@ -2,6 +2,7 @@ import "./sidebar.css";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
+import { useLocation } from "react-router";
 import 'react-edit-text/dist/index.css';
 import axios from "axios";
 
@@ -34,6 +35,22 @@ export default function Sidebar() {
       };
       getCats();
   }, []);
+
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  console.log(location.pathname)
+  console.log(path)
+  const [categories, setCategories] = useState([]);
+  
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setCategories(res.data.categories)
+    };
+    getPost();
+    
+  }, [path]);
+  
 
   // FETCH ABOUT ME DATA
   useEffect(() => {
@@ -80,13 +97,16 @@ export default function Sidebar() {
 
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">MOST VISITED CITIES</span>
+        <span className="sidebarTitle">VISITED CITIES</span>
         <ul className="sidebarList">
-          {cats?.map((c) => (
-            <Link to={`/?cat=${c.name}`} className="link">
-              <li className="sidebarListItem">{c.name}</li>
-            </Link>
-          ))}
+          
+          {/* {categories.map(elm => {
+            return <li>{elm}</li>
+          }) */}
+           {categories.toString().split(',').map(elm => {
+             console.log(elm.trim())
+             return <li>{elm.trim().charAt(0).toUpperCase() + elm.trim().slice(1)}</li>
+           })}
         </ul>
       </div>
       <div className="sidebarItem">

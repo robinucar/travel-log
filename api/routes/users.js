@@ -49,7 +49,6 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const { userId } = req.body;
   const { id } = req.params;
-  if (userId === id) {
     try {
       const user = await User.findById(id);
       try {
@@ -64,9 +63,6 @@ router.delete("/:id", async (req, res) => {
     } catch (err) {
       res.status(401).json("User not found...");
     }
-  } else {
-    res.status(401).json("You can only DELETE your account.");
-  }
 });
 
 // GET USER

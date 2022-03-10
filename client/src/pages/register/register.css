@@ -30,12 +30,15 @@
 .registerInput{
   padding: 10px;
   background-color: white;
-  border: none;
   width: 100%;
+  border: none;
+  cursor: auto;
 }
 
 .registerButton{
   margin-top: 20px;
+  margin-left: 9px;
+  width: 100%;
   cursor: pointer;
   background-color: rgb(147, 248, 147);
   border: none;

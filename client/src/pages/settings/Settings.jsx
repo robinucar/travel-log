@@ -41,12 +41,18 @@ export default function Settings() {
       dispatch({ type: "UPDATE_FAILURE" });
     }
   };
+
+  const handleDelete = async () => {
+    const res = await axios.delete("/users/" + user._id);
+    dispatch({ type: "LOGOUT" })
+  }
+
   return (
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
+          <button onClick={handleDelete}>DELETE ACCOUNT</button>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
