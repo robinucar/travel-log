@@ -53,26 +53,29 @@ console.log(categories)
             style={{ display: "none" }}
             onChange={(e) => setFile(e.target.files[0])}
           />
+          <span>
           <input
             type="text"
             placeholder="Title"
-            className="writeInput"
+            className="writeTitle"
             autoFocus={true}
             onChange={e=>setTitle(e.target.value)}
           />
+          <br/>
           <input
             type="text"
             placeholder="City"
-            className="writeInput"
+            className="writeCity"
             autoFocus={true}
             onChange={e=>setCategories(e.target.value)}
           />
+          </span>
         </div>
         <div className="writeFormGroup">
           <textarea
             placeholder="Tell your story..."
             type="text"
-            className="writeInput writeText"
+            className="writeText"
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>

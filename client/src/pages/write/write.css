@@ -3,9 +3,9 @@
 }
 
 .writeImg{
-  margin-left: 150px;
+  margin-left: 180px;
   width: 70vw;
-  height: 250px;
+  height: 350px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -34,12 +34,24 @@
   cursor: pointer;
 }
 
-.writeInput{
+.writeTitle{
   font-size: 30px;
-  border: none;
+  padding: 20px;
+  margin-top: 30px;
+  width: 70vw; 
+  border-radius: 10px;
+  outline: none;
+} 
+
+.writeCity{
+  font-size: 20px;
   padding: 20px;
   width: 70vw; 
+  margin-top: 30px;
+  border-radius: 10px;
+  outline: none;
 } 
+
 
 .writeInput:focus{
   outline: none;
@@ -47,7 +59,10 @@
 
 .writeText{
   font-size: 20px;
-  height: 100vw;
+  height: auto;
+  width: 70vw;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .writeSubmit{
