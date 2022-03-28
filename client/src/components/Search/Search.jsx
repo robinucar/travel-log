@@ -7,7 +7,6 @@ export default function Search({input:keyword, onChange:setKeyword}) {
   return (
     <div className="search">
       <div className="top-right">
-        <i className="searchIcon fa fa-search"></i>
           <input
             className="search-input"
             style={styling}
