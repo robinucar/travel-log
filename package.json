@@ -1,0 +1,19 @@
+{
+  "name": "travel-log",
+  "version": "1.0.0",
+  "description": "As a user  So that I can post feedback about my travel I want to be able to create an account.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinucar/travel-log.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinucar/travel-log/issues"
+  },
+  "homepage": "https://github.com/robinucar/travel-log#readme"
+}
