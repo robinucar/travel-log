@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/robinucar/travel-log/issues"
   },
-  "homepage": "https://github.com/robinucar/travel-log#readme"
+  "homepage": "https://github.com/robinucar/travel-log#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.0",
+    "react-test-renderer": "^18.0.0"
+  }
 }
