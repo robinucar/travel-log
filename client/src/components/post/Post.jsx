@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Post({ post }) {
   const PF = "http://localhost:5000/images/";
   return (
+    <div className="body">
     <div className="post">
       
       {post.photo && (
@@ -17,6 +18,7 @@ export default function Post({ post }) {
             </span>;
           })}
         </div>
+        <div className="info">
         <Link to={`/post/${post._id}`} style={{textDecoration: 'none', color: '#444'}}>
           <span className="postTitle"> {post.title} </span>
         </Link>
@@ -28,6 +30,8 @@ export default function Post({ post }) {
       </div>
       <p className="postDesc">{post.desc}</p>
       <button className="btn-post"><Link className="postButton" to={`/post/${post._id}`}>Read more</Link></button>
+      </div>
+    </div>
     </div>
     //example
   );

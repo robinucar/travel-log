@@ -28,7 +28,7 @@ const PostSchema = new mongoose.Schema(
     
     aboutMe: {
       type: String,
-      required: true,
+      required: false,
     },
 
     profilePic: {
